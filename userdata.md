@@ -1,8 +1,9 @@
 #!/bin/bash
 
-sudo yum update -y
-sudo amazon-linux-extras install nginx1 -y
-sudo systemctl enable nginx
-sudo systemctl start nginx
-sudo cd /usr/share/nginx/html && sudo cp index.html index.html.sample
-sudo echo "<h1>Hello World from $(hostname -f)</h1>" > /usr/share/nginx
+sudo su
+yum update -y
+amazon-linux-extras install nginx1 -y
+systemctl enable nginx
+systemctl start nginx
+cd /usr/share/nginx/html && sudo index.html index.html.sample
+echo "<h1>Hello World from $(hostname -f)</h1>" > /usr/share/nginx
